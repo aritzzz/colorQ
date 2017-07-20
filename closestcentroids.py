@@ -1,4 +1,6 @@
 import numpy as np
+import warnings
+warnings.filterwarnings("error")
 
 
 def index(initial_centroids, imagem):   
@@ -32,9 +34,11 @@ def computecentroids(imagem, idx, K):
         #print p.shape
         q = p[p[:,0] == i, 1:]
         #print q.shape
-        
-        centroids[i,:] = (q.sum(axis = 0))/q.shape[0]
- 
+        try:
+          centroids[i,:] = (q.sum(axis = 0))/q.shape[0]
+        except RuntimeWarning:
+            print q.shape
+    
     return centroids 
         
 
