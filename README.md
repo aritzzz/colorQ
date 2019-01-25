@@ -1,4 +1,4 @@
 # colorQ
 Basic Color Compression using K means
 Original Image:
-![stack Overflow](http://lmsotfy.com/so.png)
+![Original Image](https://github.com/aritzzz/colorQ/blob/master/image.png)
